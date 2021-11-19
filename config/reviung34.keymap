@@ -9,6 +9,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#define DEFAULT  0
+#define NUM_MODS 1
+#define BT_CTRL  2
+
 / {
         behaviors {
                 hm: homerow_mods {
