@@ -163,10 +163,10 @@
 
                 default_layer {
                         bindings = <
-    &kp Q     &kp W      &kp E     &kp R              &kp T             &kp Y     &kp U              &kp I        &kp O      &kp P
-    &hm ESC A &hm LGUI S &kp D     &hl NUM_MODS F     &kp G             &kp H     &hl NUM_MODS J     &kp K        &kp L      &mt SQT DQT
-    &kp Z     &kp X      &kp C     &kp V              &kp B             &kp N     &kp M              &mt LT COMMA &mt GT DOT &mt QMARK FSLH
-                           &lt NUM_MODS BSPC  &kp ESC &tabenter  &lt BT_CTRL SPACE
+    &kp Q       &kp W      &kp E     &kp R              &kp T             &kp Y     &kp U              &kp I        &kp O      &kp P
+    &hm LGUI A  &hm LALT S  &hm LCTRL D  &hl NUM_MODS F &kp G             &kp H     &hl NUM_MODS J     &hm LCTRL K  &hm LALT L &mt SQT DQT
+    &kp Z       &kp X      &kp C     &kp V              &kp B             &kp N     &kp M              &mt LT COMMA &mt GT DOT &mt QMARK FSLH
+                           &lt NUM_MODS SPACE  &kp ESC &tabenter  &lt BT_CTRL BSPC
                         >;
                 };
 
