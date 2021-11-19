@@ -13,6 +13,23 @@
 #define NUM_MODS 1
 #define BT_CTRL  2
 
+
+#define CE 2
+#define CR 3
+#define CU 6
+#define CI 7
+#define CD 12
+#define CF 13
+#define CG 14
+#define CH 15
+#define CJ 16
+#define CK 17
+#define CC 22
+#define CV 23
+#define CM 26
+#define C, 27
+
+
 / {
         behaviors {
                 hm: homerow_mods {
