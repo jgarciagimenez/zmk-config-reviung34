@@ -27,35 +27,134 @@
 #define CC 22
 #define CV 23
 #define CM 26
-#define C, 27
+#define CCOMMA 27
 
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <CD CF>; // KP: D F
+            bindings = <&kp ESC>;
+        };
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <CJ CK>; // KP: J K
+            bindings = <&kp TAB>;
+        };
+        combo_lpar {
+            timeout-ms = <50>;
+            key-positions = <CD CV>; // KP: D V
+            bindings = <&kp LPAR>;
+        };
+        combo_rpar {
+            timeout-ms = <50>;
+            key-positions = <CK CM>; // KP: K M
+            bindings = <&kp RPAR>;
+        };
+        combo_minus {
+            timeout-ms = <50>;
+            key-positions = <CE CF>; // KP: E F
+            bindings = <&mt UNDER MINUS>;
+        };
+        combo_at {
+            timeout-ms = <50>;
+            key-positions = <CF CJ>; // KP: F J
+            bindings = <&kp AT>;
+        };
+        combo_amps {
+            timeout-ms = <50>;
+            key-positions = <CD CK>; // KP: D K
+            bindings = <&kp AMPS>;
+        };
+        combo_EXCL {
+            timeout-ms = <50>;
+            key-positions = <CG CH>; // KP: G H
+            bindings = <&kp EXCL>;
+        };
+        combo_equal {
+            timeout-ms = <50>;
+            key-positions = <CI CJ>; // KP: I J
+            bindings = <&mt PLUS EQUAL>;
+        };
+        combo_dollar {
+            timeout-ms = <50>;
+            key-positions = <CE CR>;
+            bindings = <&kp DLLR>; // KP: E R
+        };
+        combo_percent {
+            timeout-ms = <50>;
+            key-positions = <CU CI>; // KP: U I
+            bindings = <&kp PRCNT>;
+        };
+        combo_grave {
+            timeout-ms = <50>;
+            key-positions = <CM CCOMMA>; // KP: M ,
+            bindings = <&mt TILDE GRAVE>;
+        };
+        combo_pipe {
+            timeout-ms = <50>;
+            key-positions = <CC CV>; // KP: C V
+            bindings = <&mt BSLH PIPE>;
+        };
+        combo_lbkt2 {
+            timeout-ms = <50>;
+            key-positions = <CD CG>; // KP: D G
+            bindings = <&mt LBRC LBKT>;
+        };
+        combo_rbkt2 {
+            timeout-ms = <50>;
+            key-positions = <CH CK>; // KP: H K
+            bindings = <&mt RBRC RBKT>;
+        };
+        combo_under {
+            timeout-ms = <50>;
+            key-positions = <CR CD>; // KP: R D
+            bindings = <&kp UNDER>;
+        };
+        combo_plus {
+            timeout-ms = <50>;
+            key-positions = <CU CK>; // KP: U K
+            bindings = <&kp PLUS>;
+        };
+        combo_hash {
+            timeout-ms = <50>;
+            key-positions = <CR CJ>; // KP: R J
+            bindings = <&kp HASH>;
+        };
+        combo_star {
+            timeout-ms = <50>;
+            key-positions = <CU CF>; // KP: U F
+            bindings = <&kp STAR>;
+        };
+    };
+
         behaviors {
                 hm: homerow_mods {
-                compatible = "zmk,behavior-hold-tap";
-                label = "HOMEROW_MODS";
-                #binding-cells = <2>;
-                tapping-term-ms = <250>;
-                quick_tap_ms = <0>;
-                flavor = "tap-preferred";
-                bindings = <&kp>, <&kp>;
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "HOMEROW_MODS";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <250>;
+                        quick_tap_ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&kp>, <&kp>;
                 };
                 hl: homerow_layers {
-                compatible = "zmk,behavior-hold-tap";
-                label = "HOMEROW_LAYERS";
-                #binding-cells = <2>;
-                tapping-term-ms = <150>;
-                quick_tap_ms = <100>;
-                flavor = "tap-preferred";
-                bindings = <&mo>, <&kp>;
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "HOMEROW_LAYERS";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <150>;
+                        quick_tap_ms = <100>;
+                        flavor = "tap-preferred";
+                        bindings = <&mo>, <&kp>;
                 };
                 tabenter: tab_enter {
-                compatible = "zmk,behavior-mod-morph";
-                label = "TAB_ENTER";
-                #binding-cells = <0>;
-                bindings = <&mt LSHIFT ENTER>, <&kp TAB>;
-                mods = <(MOD_LALT | MOD_RALT)>;
+                        compatible = "zmk,behavior-mod-morph";
+                        label = "TAB_ENTER";
+                        #binding-cells = <0>;
+                        bindings = <&mt LSHIFT ENTER>, <&kp TAB>;
+                        mods = <(MOD_LALT | MOD_RALT)>;
                 };
         };
 
