@@ -34,7 +34,92 @@
             key-positions = <32 33>;
             bindings = <&mo FUN_L>;
         };
-
+	
+        combo_cut {
+            timeout-ms = <50>;
+            key-positions = <21 23>;
+            bindings = <&kp LC(X)>;
+        };  
+	
+        combo_copy {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&kp LC(C)>;
+        };  
+	
+        combo_paste {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&mt LS(LC(V)) LC(V)>;
+        }; 
+        combo_bs_left {
+            timeout-ms = <50>;
+            key-positions = <5 6>;
+            layers = <0>;
+            bindings = <&kp LC(BSPC)>;
+        }; 
+	
+       combo_lpar {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            layers = <0>;
+            bindings = <&kp LPAR>;
+        };  
+        combo_rpar {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            layers = <0>;
+            bindings = <&kp RPAR>;
+        };  
+        combo_rbrac {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            layers = <0>;
+            bindings = <&mt RBRC RBKT>;
+        }; 
+        combo_lbrac {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            layers = <0>;
+            bindings = <&mt LBRC LBKT>;
+        };
+        combo_lpar_veritcal {
+            timeout-ms = <50>;
+            key-positions = <3 13>;
+            layers = <0>;
+            bindings = <&kp LPAR>;
+        };  
+        combo_rpar_vertical {
+            timeout-ms = <50>;
+            key-positions = <6 16>;
+            layers = <0>;
+            bindings = <&kp RPAR>;
+        };  
+        combo_rbrac_vertical {
+            timeout-ms = <50>;
+            key-positions = <7 17>;
+            layers = <0>;
+            bindings = <&mt RBRC RBKT>;
+        }; 
+        combo_lbrac_vertical {
+            timeout-ms = <50>;
+            key-positions = <2 12>;
+            layers = <0>;
+            bindings = <&mt LBRC LBKT>;
+        }; 
+	
+       combo_eq_vertical {
+            timeout-ms = <50>;
+            key-positions = <4 14>;
+            layers = <0>;
+            bindings = <&mt EQUAL PLUS>;
+        };	
+       combo_cap_word{
+            timeout-ms = <50>;
+            key-positions = <16 13>;
+            layers = <0>;
+            bindings = <&caps_word>;
+        };
     };
 
     behaviors {
@@ -42,7 +127,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods";
             #binding-cells = <2>;
-            tapping_term_ms = <150>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
